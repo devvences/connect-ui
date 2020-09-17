@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+
+    <link rel="stylesheet" href="resources/css/main.css?v1">
+
+    <link rel="stylesheet" href="resources/framework/sweet-scroll/style.css">
+
+    <!-- Bootstrap CSS 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+-->
+    <link rel="stylesheet" href="resources/framework/bootstrap/4.5.0/css/bootstrap.min.css">
+	
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon.png?v1">
+
+    <title>conecta MiPyMe</title>
+  </head>
+  <body>
+
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">  
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-body">
+            <form>
+              <div class="login">
+                <div class="form-group">
+                  <label for="inputUser">Usuario</label>
+                  <input type="text" class="form-control" id="inputUser" placeholder="">
+                </div>
+                <div class="form-group">
+                  <label for="inputPassword">Password</label>
+                  <input type="text" class="form-control" id="inputPassword" placeholder="">
+                </div>
+                <div class="form-group">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                  <button type="button" class="btn btn-primary">Iniciar sesion</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div> 
+
+    <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel" aria-hidden="true">  
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-body">
+            <form>
+              <div class="signin">
+                <div class="form-group">
+                  <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-secondary active">
+                      <input type="radio" name="options" id="consultor" checked> Consultor
+                    </label>
+                    <label class="btn btn-secondary">
+                      <input type="radio" name="options" id="company"> Empresa
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputName">Nombre</label>
+                  <input type="text" class="form-control" id="inputName" placeholder="">
+                </div>
+                <div class="form-group">
+                  <label for="inputLastName">Apellidos</label>
+                  <input type="text" class="form-control" id="inputLastName" placeholder="">
+                </div>
+                <div class="form-group">
+                  <label for="inputEmail">email</label>
+                  <input type="text" class="form-control" id="inputEmail" placeholder="">
+                </div>
+                <div class="form-group">
+                  <label for="inputPassword">Constraseña</label>
+                  <input type="text" class="form-control" id="inputPassword" placeholder="">
+                </div>
+                <div class="form-group">
+                  <label for="inputPhone">Telefono</label>
+                  <input type="text" class="form-control" id="inputPhone" placeholder="">
+                </div>
+                <div class="form-group">
+                  <label for="validationServer01">Nombre</label>
+                  <input type="text" class="form-control is-valid" id="validationServer01" value="" required>
+                  <div class="valid-feedback">
+                    Nombre valido!
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="validationServer03">Telefono</label>
+                  <input type="text" class="form-control is-invalid" id="validationServer03" required>
+                  <div class="invalid-feedback">
+                    Tenefono no valido, intentalo nuevamente.
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="selectIndustry">Industria</label>
+                  <select class="form-control" id="selectIndustry">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="selectSpeciality">Especialidad</label>
+                  <select class="form-control" id="selectSpeciality">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-primary">Registrarte</button>
+          </div>
+        </div>
+      </div>
+    </div>  
+
+    <div class="d-flex flex-row align-items-center p-1 px-4 bg-white border-bottom shadow-sm">
+      <h5 class="my-0 mr-auto font-weight-normal">
+        <a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap">
+          <img src="resources/img/logo/ConectaMiPyMe_Logox100.png" loading="lazy">	
+        </a>
+      </h5>
+      <nav class="my-0">
+        <a class="navbar-brand" href="https://www.facebook.com/conectamipyme" target="_blank">
+          <img src="resources/img/fb32.png" width="30" height="30" alt="" loading="lazy">
+        </a>
+		
+		<!--
+        <a class="navbar-brand" href="#">
+          <img src="resources/img/insta32.png" width="30" height="30" alt="" loading="lazy">
+        </a>
+		-->
+		
+      </nav>
+    </div>
+
+    <nav id="main-nav" class="nav">
+      <a class="nav-link disabled" href="#" data-toggle="modal" data-target="#signUpModal">Registrarte</a>
+      <a class="nav-link disabled" href="#" data-toggle="modal" data-target="#loginModal">Ingresar</a>
+    </nav>
+
+    <div id="main-parallax" class="parallax">
+      <div id="carouselParallaxIndicators" class="carousel slide full-height" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselParallaxIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselParallaxIndicators" data-slide-to="1"></li>
+        </ol>
+        <div class="carousel-inner full-height">
+          <div class="carousel-item active full-height">
+            <div class="d-flex full-height">   
+              <dl class="row align-self-center mx-auto my-auto text-center">
+                <dt class="col-sm-9 mx-auto">
+                  <h2 class="text-white">
+                    <strong class="text-white bg-turquoise">¿Eres empresa?</strong>
+                    ¿Requieres una asesoría para tu micro, pequeña o mediana empresa? Regístrate, será un placer ayudarte.
+                  </h2>
+                  <button type="button" class="btn btn-warning" disabled>Registra tu empresa</button>
+                </dt>
+              </dl>
+            </div>
+          </div>
+          <div class="carousel-item full-height">
+            <div class="d-flex full-height">   
+              <dl class="row align-self-center mx-auto my-auto text-center">
+                <dt class="col-sm-9 mx-auto">
+                  <h2 class="text-white">
+                    <strong class="text-dark bg-light">¿Quieres ser consultor?</strong> 
+                    Pon en práctica tus conocimientos y experiencia profesional. Apoya al crecimiento de una empresa, regístrate para ser un consultor.
+                  </h2>
+                  <button type="button" class="btn btn-dark" disabled>Registro consultor</button>
+                </dt>
+              </dl>     
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselParallaxIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselParallaxIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+
+    <section class="jumbotron text-center">
+      <div class="container">
+        <h1>Misión</h1>
+        <p class="lead text-muted">Ayudar a empresas que se encuentran en situación vulnerable ante la crisis sanitaria provocada por el COVID19, proporcionándoles una red de consultores expertos en diversas áreas que los orientarán para mejorar su situación.</p>
+        <br>
+        <h3>¿Cómo lo logramos?</h3>
+        <p class="lead text-muted">Proporcionando orientación con herramientas, soluciones innovadoras, nuevas oportunidades, red de contactos de valor.</p>
+      </div>
+    </section>
+
+    <div class="container marketing" style="color: #5a5a5a;">
+      <hr class="featurette-divider">
+      <div class="row featurette">
+        <div class="col-md-6">
+          <h2 class="featurette-heading">¿Cómo ser consultor? </h2>
+          <p class="lead">Llena el formulario para registrarte. Una vez aceptado, te asignaremos a una empresa relacionada a tu experiencia para que comiences la asesoría. Te recomendamos contactar a la empresa en la primera semana y dar seguimiento más de una vez a la semana.</p>
+        </div>
+        <div class="col-md-1">
+          <br>
+        </div>
+        <div id="first-parallax" class="parallax col-md-5">
+          <!--
+          <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+          -->  
+        </div>
+      </div>
+      <hr class="featurette-divider">
+      <div class="row featurette">
+        <div class="col-md-6 order-md-3">
+          <h2 class="featurette-heading"><span class="text-muted">¿Cómo solicitar una asesoría?</span></h2>
+          <p class="lead">Llena el formulario para registrarte. Se te asignará un consultor que se encuentre disponible, quien se podrá en contacto contigo. Te recomendamos definir horarios con el consultor para que trabajen una o dos veces a la semana con objetivos definidos y medibles.</p>
+        </div>
+        <div class="col-md-1 order-md-2">
+          <br>
+        </div>
+        <div id="second-parallax" class="parallax col-md-5 order-md-1">
+          <!--
+          <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+        |-->
+        </div>
+      </div>
+    </div>
+
+
+
+
+<div class="container">
+
+  <footer class="pt-4 my-md-5 pt-md-5 border-top">
+    <div class="row">
+      <div class="col-12 col-md">
+        <img class="mb-2" src="/docs/4.5/assets/brand/bootstrap-solid.svg" alt="" width="24" height="24">
+        <small class="d-block mb-3 text-muted">&copy; conecta MiPyMe 2020</small>
+      </div>
+	  
+
+      <div class="col-6 col-md">
+        <!--
+		<h5>Features</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="https://www.facebook.com/conectamipyme" target="_blank">Facebook</a></li>
+		 
+          <li><a class="text-muted" href="#">Random feature</a></li>
+          <li><a class="text-muted" href="#">Team feature</a></li>
+          <li><a class="text-muted" href="#">Stuff for developers</a></li>
+          <li><a class="text-muted" href="#">Another one</a></li>
+          <li><a class="text-muted" href="#">Last time</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Resources</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="#">Resource</a></li>
+          <li><a class="text-muted" href="#">Resource name</a></li>
+          <li><a class="text-muted" href="#">Another resource</a></li>
+          <li><a class="text-muted" href="#">Final resource</a></li>
+        </ul>
+      </div>
+	  -->
+      <div class="col-6 col-md">
+        <h5>About</h5>
+        <ul class="list-unstyled text-small">
+		  <li><a class="text-muted" href="https://www.facebook.com/conectamipyme" target="_blank">Facebook</a></li>
+          <!--
+		  <li><a class="text-muted" href="#">Team</a></li>
+          <li><a class="text-muted" href="#">Locations</a></li>
+          <li><a class="text-muted" href="#">Privacy</a></li>
+          <li><a class="text-muted" href="#">Terms</a></li>
+		  -->
+        </ul>
+      </div>
+	  
+	  
+    </div>
+  </footer>
+</div>
+
+      <script src="resources/framework/sweet-scroll/sweet-scroll.min.js"></script>
+
+    	<!-- Optional JavaScript -->
+    	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+      <script>
+$(window).on('scroll', function (event) {
+    var scrollValue = $(window).scrollTop();
+    if (scrollValue > 75) {
+        $('.nav').addClass('fixed-top');
+    } else{
+        $('.nav').removeClass('fixed-top');
+    }
+});
+      </script>
+  </body>
+</html>
